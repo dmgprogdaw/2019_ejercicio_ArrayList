@@ -38,7 +38,7 @@ public class ImprimirConsola {
 	
 	public static void imprimirPrivado(Persona persona) {
 		
-		System.out.println("**************");
+//		System.out.println("**************");
 		System.out.println(persona.getNombre() + ", " + persona.getApellidos() + ", " + persona.getTelefono() + ", " + persona.getCiudad() + ", " + persona.getEdad() +
 				", " + persona.getPeso());
 	}

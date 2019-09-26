@@ -1,10 +1,10 @@
 package com.david.arrayList.negocio.ListaPersonas;
 
 import java.util.ArrayList;
+import java.util.Comparator;
 import java.util.Iterator;
 import com.david.arrayList.beans.Persona;
 import com.david.arrayList.error.FueraDeRangoException;
-import com.david.arrayList.negocio.ordenador.OrdenadorPersonas;
 
 public class ListaPersonas {
 	
@@ -62,8 +62,8 @@ public class ListaPersonas {
 		 * Ordenador de la lista que necesita un Comparator para poder ordenarse
 		 * @param 
 		 */
-		public void ordenar(OrdenadorPersonas op) {
-//			
+		public void ordenar(Comparator<Persona> op) {
+			
 			listaInterna.sort(op);
 		}
 }

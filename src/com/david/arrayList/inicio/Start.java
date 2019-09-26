@@ -2,6 +2,7 @@ package com.david.arrayList.inicio;
 
 import com.david.arrayList.beans.Persona;
 import com.david.arrayList.negocio.ListaPersonas.ListaPersonas;
+import com.david.arrayList.negocio.ordenador.OrdenadorAscendenteDescendente;
 import com.david.arrayList.negocio.ordenador.OrdenadorPersonas;
 import com.david.arrayList.print.ImprimirConsola;
 
@@ -48,10 +49,9 @@ public class Start {
 		lista.addPersona(persona3);
 		lista.addPersona(persona4);
 		
-//		ImprimirConsola.imprimirListaPersonas(lista);
-		// TODO operacion para escoger la manera en la que ordena
-		OrdenadorPersonas op = new OrdenadorPersonas();
-		op.ordenateEdadPeso("des");
+		OrdenadorAscendenteDescendente op = new OrdenadorAscendenteDescendente();
+		op.setMetodoOrdenacionEdad(OrdenadorAscendenteDescendente.ORDENACION_DESCENDENTE);
+		op.setMetodoOrdenacionPeso(OrdenadorAscendenteDescendente.ORDENACION_ASCENDENTE);
 		lista.ordenar(op);
 		ImprimirConsola.imprimirListaPersonas(lista.getPersonas());
 	}
