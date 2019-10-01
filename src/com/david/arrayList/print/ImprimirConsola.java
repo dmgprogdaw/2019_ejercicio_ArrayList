@@ -9,7 +9,7 @@ import com.david.arrayList.negocio.ListaPersonas.ListaPersonas;
 public class ImprimirConsola {
 	
 	public static void imprimirListaPersonas(ListaPersonas lista) {
-		
+		System.out.println("**************");
 		for(int i=0;i<lista.getTamanio(); i++) {
 			
 			//Comprobamos que no haya errores e imprimimos la impresion
@@ -28,7 +28,7 @@ public class ImprimirConsola {
 	 * @param lista iterador de Persona
 	 */
 	public static void imprimirListaPersonas(Iterator<Persona> lista) {
-		
+		System.out.println("**************");
 		while(lista.hasNext()) {
 			
 			Persona persona = lista.next();
@@ -38,7 +38,7 @@ public class ImprimirConsola {
 	
 	public static void imprimirPrivado(Persona persona) {
 		
-//		System.out.println("**************");
+		
 		System.out.println(persona.getNombre() + ", " + persona.getApellidos() + ", " + persona.getTelefono() + ", " + persona.getCiudad() + ", " + persona.getEdad() +
 				", " + persona.getPeso());
 	}

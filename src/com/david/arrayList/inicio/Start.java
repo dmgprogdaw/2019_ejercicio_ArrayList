@@ -50,9 +50,13 @@ public class Start {
 		lista.addPersona(persona4);
 		
 		OrdenadorAscendenteDescendente op = new OrdenadorAscendenteDescendente();
-		op.setMetodoOrdenacionEdad(OrdenadorAscendenteDescendente.ORDENACION_DESCENDENTE);
-		op.setMetodoOrdenacionPeso(OrdenadorAscendenteDescendente.ORDENACION_ASCENDENTE);
+		op.setMetodoOrdenacionEdad(OrdenadorAscendenteDescendente.ORDENACION_ASCENDENTE);
+		op.setMetodoOrdenacionPeso(OrdenadorAscendenteDescendente.ORDENACION_DESCENDENTE);
 		lista.ordenar(op);
+		
+		OrdenadorPersonas op1 = new OrdenadorPersonas();
+		op1.ordenateEdad();
+		lista.ordenar(op1);
 		ImprimirConsola.imprimirListaPersonas(lista.getPersonas());
 	}
 }
